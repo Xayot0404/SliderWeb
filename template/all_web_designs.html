@@ -1,0 +1,26 @@
+<html lang="uz">
+<head>
+    <meta charset="UTF-8">
+    <title>Barcha Web Dizaynlar</title>
+</head>
+<body>
+    <h1>Barcha Web Dizaynlar</h1>
+    <ul>
+        {% for design in web_designs %}
+            <li>
+                {{ design.name }}
+                {{ design.title }}
+                {{design.description}}
+                <a href="{% url 'open_pptx' design.id %}" target="_blank">Slider Open</a>
+                <h1>Presentation</h1>
+
+        {% empty %}
+            <li>No designs found.</li>
+        {% endfor %}
+    </ul>
+    <a href="{% url 'WebDesign' %}">Orqaga</a> 
+</body>
+</html>
+
+
+

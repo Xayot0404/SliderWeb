@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prezentatsiyalar</title>
+</head>
+<body>
+    <h1>Prezentatsiyalar</h1>
+    <div>
+        {% for presentation in presentations %}
+            <h2>{{ presentation.title }}</h2>
+            <iframe src="{{ presentation.html_file.url }}" width="100%" height="600" frameborder="0"></iframe>
+        {% endfor %}
+    </div>
+</body>
+</html>

@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ presentation.title }}</title>
+</head>
+<body>
+    <h1>{{ presentation.title }}</h1>
+    <iframe src="{{ presentation.html_file.url }}" width="100%" height="600" frameborder="0"></iframe>
+    <br>
+    <a href="{% url 'presentation_list' %}">Barcha prezentatsiyalarni ko'rish</a>
+</body>
+</html>
